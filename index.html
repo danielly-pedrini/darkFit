@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkFit – Transforme seu corpo. Supere seus limites.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5515999999999?text=Olá!%20Quero%20conhecer%20a%20DarkFit!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">DARKFIT</a>
+      <ul class="nav-links"></ul>
+      <button class="nav-cta" onclick="document.getElementById('planos').scrollIntoView({behavior:'smooth'})">Matricular-se</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"></div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Academia Premium · Porto Feliz, SP
+        </div>
+        <h1 class="hero-title">DARK<span>FIT</span></h1>
+        <p class="hero-subtitle">Transforme seu corpo. Supere seus limites.</p>
+        <p class="hero-text">Treinos de alta performance, estrutura premium e tecnologia moderna para levar você ao próximo nível.</p>
+        <div class="hero-buttons">
+          <a href="#planos" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Começar Agora
+          </a>
+          <a href="#sobre" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Conheça a Academia
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="section-inner">
+        <div class="sobre-grid">
+          <div class="sobre-visual" data-animate>
+            <div class="sobre-image-box">
+              <img src="./assets/faixada-DarkFit.png" alt="DarkFit Academia" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <div class="sobre-corner tl"></div>
+              <div class="sobre-corner br"></div>
+            </div>
+            <div class="sobre-float">
+              <div class="sobre-float-num">+5K</div>
+              <div class="sobre-float-label">Alunos transformados</div>
+            </div>
+          </div>
+          <div class="sobre-text" data-animate>
+            <span class="section-tag" data-animate>Sobre a DarkFit</span>
+            <h2 class="section-title" data-animate>Muito mais que<br>uma <span class="accent">academia.</span></h2>
+            <p class="section-desc" data-animate>Na DarkFit, cada detalhe foi pensado para impulsionar sua evolução. Unimos tecnologia, estrutura moderna e uma atmosfera intensa para transformar seus treinos em uma experiência única.</p>
+            <p class="section-desc" data-animate style="margin-top:1rem;">Com equipamentos de última geração, ambientes climatizados e energia motivadora, você encontra o espaço ideal para superar seus limites todos os dias.</p>
+            <div class="sobre-features">
+              <div class="feature-item"><div class="feature-icon">⚡</div><div class="feature-label">Equipamentos de última geração</div></div>
+              <div class="feature-item"><div class="feature-icon">❄️</div><div class="feature-label">Ambientes climatizados</div></div>
+              <div class="feature-item"><div class="feature-icon">📱</div><div class="feature-label">App exclusivo da academia</div></div>
+              <div class="feature-item"><div class="feature-icon">🏆</div><div class="feature-label">Profissionais certificados</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades">
+      <div class="section-inner">
+        <div class="modal-header">
+          <span class="section-tag" data-animate>Modalidades</span>
+          <h2 class="section-title" data-animate>Treinos para todos<br>os <span class="accent">objetivos.</span></h2>
+          <p class="section-desc" data-animate>Escolha a modalidade ideal para sua meta e evolua com acompanhamento especializado.</p>
+        </div>
+        <div class="modal-grid">
+          <div class="modal-card" data-animate style="transition-delay:0s">
+            <span class="modal-icon"><img src="./assets/musculacao.png" alt="Musculação"></span>
+            <div class="modal-name">Musculação</div>
+            <p class="modal-desc">Ganhe força, definição e performance com equipamentos modernos e acompanhamento especializado de alto nível.</p>
+            <span class="modal-number">01</span>
+          </div>
+          <div class="modal-card" data-animate style="transition-delay:0.1s">
+            <span class="modal-icon"><img src="./assets/cardio.png" alt="Cardio"></span>
+            <div class="modal-name">Cardio</div>
+            <p class="modal-desc">Aumente sua resistência e acelere a queima de calorias com uma área completa de exercícios cardiovasculares.</p>
+            <span class="modal-number">02</span>
+          </div>
+          <div class="modal-card" data-animate style="transition-delay:0.2s">
+            <span class="modal-icon"><img src="./assets/funcional.png" alt="Funcional"></span>
+            <div class="modal-name">Funcional</div>
+            <p class="modal-desc">Treinos dinâmicos focados em mobilidade, resistência, equilíbrio e condicionamento físico completo.</p>
+            <span class="modal-number">03</span>
+          </div>
+          <div class="modal-card" data-animate style="transition-delay:0.3s">
+            <span class="modal-icon"><img src="./assets/Personal-Training.png" alt="Personal Training"></span>
+            <div class="modal-name">Personal Training</div>
+            <p class="modal-desc">Treinos personalizados para resultados ainda mais rápidos e eficientes com exclusividade total.</p>
+            <span class="modal-number">04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats">
+      <div class="stats-bg"></div>
+      <div class="section-inner">
+        <div class="stats-label-top">
+          <span class="section-tag" data-animate>Números que impressionam</span>
+          <h2 class="section-title" data-animate>Resultados que <span class="accent">inspiram.</span></h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item" data-animate data-delay="0">
+            <span class="stat-number" data-counter="5000" data-prefix="+">0</span>
+            <span class="stat-label">Alunos Ativos</span>
+          </div>
+          <div class="stat-item" data-animate data-delay="100">
+            <span class="stat-number" data-counter="120" data-prefix="+">0</span>
+            <span class="stat-label">Equipamentos Modernos</span>
+          </div>
+          <div class="stat-item" data-animate data-delay="200">
+            <span class="stat-number" data-counter="98" data-suffix="%">0</span>
+            <span class="stat-label">Satisfação</span>
+          </div>
+          <div class="stat-item" data-animate data-delay="300">
+            <span class="stat-number" style="font-size:2rem">24H</span>
+            <span class="stat-label">Energia Fitness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTIVACIONAL -->
+    <section id="motivacional">
+      <div class="section-inner" style="text-align:center">
+        <span class="section-tag" data-animate>Mentalidade</span>
+        <h2 class="motiv-quote" data-animate>Seu único concorrente<br>é <span class="accent">você mesmo.</span></h2>
+        <p class="motiv-sub" data-animate>Disciplina, foco e constância são os pilares da transformação. Cada treino é uma nova oportunidade para evoluir física e mentalmente.</p>
+        <div class="motiv-tags" data-animate>
+          <span class="motiv-tag">Evolua sem limites</span>
+          <span class="motiv-tag">Power. Focus. Evolution.</span>
+          <span class="motiv-tag">Disciplina gera evolução</span>
+          <span class="motiv-tag">Beyond your limits</span>
+          <span class="motiv-tag">Transforme esforço em resultado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA -->
+    <section id="estrutura">
+      <div class="section-inner">
+        <div class="estrutura-grid">
+          <div class="estrutura-text">
+            <span class="section-tag" data-animate>Nossa Estrutura</span>
+            <h2 class="section-title" data-animate>Uma estrutura feita<br>para <span class="accent">performance.</span></h2>
+            <p class="section-desc" data-animate>Ambientes amplos, iluminação moderna, equipamentos profissionais e design futurista criam a experiência perfeita para quem busca evolução de verdade.</p>
+            <div class="estrutura-list">
+              <div class="estrutura-item" data-animate>
+                <span class="estrutura-item-icon">🏗️</span>
+                <div class="estrutura-item-text"><strong>Espaço Amplo</strong>Mais de 1.500m² de área de treinamento</div>
+              </div>
+              <div class="estrutura-item" data-animate style="transition-delay:0.1s">
+                <span class="estrutura-item-icon">❄️</span>
+                <div class="estrutura-item-text"><strong>Climatização Total</strong>Temperatura ideal em todos os ambientes</div>
+              </div>
+              <div class="estrutura-item" data-animate style="transition-delay:0.2s">
+                <span class="estrutura-item-icon">🚿</span>
+                <div class="estrutura-item-text"><strong>Vestiários Premium</strong>Armários, chuveiros e área de relaxamento</div>
+              </div>
+              <div class="estrutura-item" data-animate style="transition-delay:0.3s">
+                <span class="estrutura-item-icon">📶</span>
+                <div class="estrutura-item-text"><strong>Wi-Fi de Alta Velocidade</strong>Conexão gratuita em toda a academia</div>
+              </div>
+              <div class="estrutura-item" data-animate style="transition-delay:0.4s">
+                <span class="estrutura-item-icon">🅿️</span>
+                <div class="estrutura-item-text"><strong>Estacionamento Gratuito</strong>Vagas exclusivas para alunos</div>
+              </div>
+            </div>
+          </div>
+          <div class="estrutura-images" data-animate>
+            <div class="estrutura-mosaic">
+              <div class="mosaic-item m1">
+                <img src="./assets/espaco-funcional.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="mosaic-item m2">
+                <img src="./assets/ambiente-motivador.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="mosaic-item m4">
+                <img src="./assets/equipamentos.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="mosaic-item m4">
+                <img src="./assets/cardio-avançado.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="mosaic-item m5">
+                <img src="./assets/vestuario.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="mosaic-item m6">
+                <img src="./assets/lounge.png" alt="Estrutura DarkFit" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos">
+      <div class="section-inner">
+        <div class="planos-header">
+          <span class="section-tag" data-animate>Planos</span>
+          <h2 class="section-title" data-animate>Escolha o plano ideal<br>para sua <span class="accent">evolução.</span></h2>
+        </div>
+        <div class="planos-grid">
+          <div class="plano-card" data-animate style="transition-delay:0s">
+            <div class="plano-name">Starter</div>
+            <div class="plano-price">R$ 89<span>,90/mês</span></div>
+            <p class="plano-desc">Ideal para quem deseja começar sua jornada fitness com liberdade e flexibilidade.</p>
+            <ul class="plano-features">
+              <li>Acesso completo à academia</li>
+              <li>Área de musculação</li>
+              <li>Área cardio</li>
+              <li>Aulas funcionais</li>
+              <li>Avaliação física inicial</li>
+              <li>Wi-Fi gratuito</li>
+              <li>App da academia</li>
+            </ul>
+            <button class="plano-btn">Começar Agora</button>
+          </div>
+          <div class="plano-card featured" data-animate style="transition-delay:0.15s">
+            <div class="plano-badge">Mais Popular</div>
+            <div class="plano-name">Performance</div>
+            <div class="plano-price">R$ 219<span>,90/trim.</span></div>
+            <p class="plano-desc">Mais benefícios, mais constância e melhor custo-benefício para acelerar seus resultados.</p>
+            <ul class="plano-features">
+              <li>Tudo do plano Starter</li>
+              <li>Reavaliação física</li>
+              <li>Treino personalizado básico</li>
+              <li>Área premium de alongamento</li>
+              <li>Descontos em parceiros</li>
+              <li>Prioridade em eventos</li>
+            </ul>
+            <button class="plano-btn filled">Quero Evoluir</button>
+          </div>
+          <div class="plano-card" data-animate style="transition-delay:0.3s">
+            <div class="plano-badge" style="background:#ffb800;color:#000">Melhor Valor</div>
+            <div class="plano-name">Elite</div>
+            <div class="plano-price">R$ 699<span>,90/ano</span></div>
+            <p class="plano-desc">A experiência premium completa para quem leva performance e evolução a sério.</p>
+            <ul class="plano-features">
+              <li>Tudo do plano Performance</li>
+              <li>Consultoria fitness exclusiva</li>
+              <li>Aula experimental com personal</li>
+              <li>Camiseta DarkFit exclusiva</li>
+              <li>Congelamento de matrícula</li>
+              <li>Acesso VIP a eventos internos</li>
+            </ul>
+            <button class="plano-btn">Entrar para Elite</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos">
+      <div class="dep-header">
+        <div class="section-inner">
+          <span class="section-tag" data-animate>Depoimentos</span>
+          <h2 class="section-title" data-animate>Quem vive a experiência<br><span class="accent">recomenda.</span></h2>
+        </div>
+      </div>
+      <div class="dep-track-outer" style="margin-top:3rem">
+        <div class="dep-track" id="depTrack">
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"A DarkFit mudou completamente minha rotina. Ambiente incrível, motivador e com uma energia que não encontro em nenhum outro lugar."</p><div class="dep-author"><div class="dep-avatar">💪</div><div><div class="dep-name">Carlos Mendes</div><div class="dep-role">Aluno há 8 meses</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Equipamentos modernos, ótimo atendimento e uma energia absurda nos treinos. Perdi 12kg em 4 meses com suporte total."</p><div class="dep-author"><div class="dep-avatar">🔥</div><div><div class="dep-name">Ana Paula Silva</div><div class="dep-role">Aluna há 1 ano</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Foi aqui que consegui alcançar meus melhores resultados. O plano Elite valeu cada centavo. Personal training de excelência."</p><div class="dep-author"><div class="dep-avatar">⚡</div><div><div class="dep-name">Rodrigo Ferreira</div><div class="dep-role">Aluno há 2 anos</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"A estrutura é impecável. Nunca faltam máquinas e o ambiente é sempre limpo e organizado. Recomendo para todos."</p><div class="dep-author"><div class="dep-avatar">🏆</div><div><div class="dep-name">Fernanda Costa</div><div class="dep-role">Aluna há 6 meses</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Os instrutores são excepcionais, sempre atentos à postura e evolução. DarkFit é referência em Porto Feliz com certeza."</p><div class="dep-author"><div class="dep-avatar">🎯</div><div><div class="dep-name">Thiago Alves</div><div class="dep-role">Aluno há 10 meses</div></div></div></div>
+          <!-- Duplicados para loop infinito -->
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"A DarkFit mudou completamente minha rotina. Ambiente incrível, motivador e com uma energia que não encontro em nenhum outro lugar."</p><div class="dep-author"><div class="dep-avatar">💪</div><div><div class="dep-name">Carlos Mendes</div><div class="dep-role">Aluno há 8 meses</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Equipamentos modernos, ótimo atendimento e uma energia absurda nos treinos. Perdi 12kg em 4 meses com suporte total."</p><div class="dep-author"><div class="dep-avatar">🔥</div><div><div class="dep-name">Ana Paula Silva</div><div class="dep-role">Aluna há 1 ano</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Foi aqui que consegui alcançar meus melhores resultados. O plano Elite valeu cada centavo. Personal training de excelência."</p><div class="dep-author"><div class="dep-avatar">⚡</div><div><div class="dep-name">Rodrigo Ferreira</div><div class="dep-role">Aluno há 2 anos</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"A estrutura é impecável. Nunca faltam máquinas e o ambiente é sempre limpo e organizado. Recomendo para todos."</p><div class="dep-author"><div class="dep-avatar">🏆</div><div><div class="dep-name">Fernanda Costa</div><div class="dep-role">Aluna há 6 meses</div></div></div></div>
+          <div class="dep-card"><div class="dep-stars">★★★★★</div><p class="dep-text">"Os instrutores são excepcionais, sempre atentos à postura e evolução. DarkFit é referência em Porto Feliz com certeza."</p><div class="dep-author"><div class="dep-avatar">🎯</div><div><div class="dep-name">Thiago Alves</div><div class="dep-role">Aluno há 10 meses</div></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMC -->
+    <section id="imc">
+      <div class="section-inner">
+        <div class="imc-inner">
+          <div class="imc-info">
+            <span class="section-tag" data-animate>Ferramenta Gratuita</span>
+            <h2 class="section-title" data-animate>Calcule seu<br><span class="accent">IMC agora.</span></h2>
+            <p class="section-desc" data-animate>Descubra seu índice de massa corporal e receba uma recomendação personalizada. Nossos especialistas podem montar o treino ideal para você.</p>
+            <div style="margin-top:2rem;opacity:0;transform:translateY(20px);transition:all 0.7s 0.3s ease" data-animate>
+              <a href="https://wa.me/5515999999999?text=Quero%20saber%20mais%20sobre%20a%20DarkFit!" class="btn-primary" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Falar com um Especialista
+              </a>
+            </div>
+          </div>
+          <div class="imc-card" data-animate>
+            <h3>⚡ Calculadora IMC</h3>
+            <div class="imc-field">
+              <label>Peso (kg)</label>
+              <input type="number" id="imcPeso" placeholder="Ex: 75" min="30" max="300"/>
+            </div>
+            <div class="imc-field">
+              <label>Altura (cm)</label>
+              <input type="number" id="imcAltura" placeholder="Ex: 175" min="100" max="250"/>
+            </div>
+            <button class="imc-btn" onclick="calcularIMC()">Calcular Meu IMC</button>
+            <div class="imc-result" id="imcResult">
+              <div class="imc-result-num" id="imcNum">–</div>
+              <div class="imc-result-cat" id="imcCat">–</div>
+              <div class="imc-result-rec" id="imcRec">–</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSORES -->
+    <section id="professores">
+      <div class="section-inner">
+        <div class="prof-header">
+          <span class="section-tag" data-animate>Nossa Equipe</span>
+          <h2 class="section-title" data-animate>Profissionais que <span class="accent">transformam.</span></h2>
+          <p class="section-desc" data-animate>Nossa equipe é formada por especialistas certificados, apaixonados por evolução e dedicados a levar você ao seu melhor nível.</p>
+        </div>
+        <div class="prof-grid">
+          <div class="prof-card" data-animate style="transition-delay:0s">
+            <div class="prof-avatar">
+              <img src="./assets/Rafael-Moura.png" alt="Rafael Moura" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </div>
+            <div class="prof-info">
+              <div class="prof-name">Rafael Moura</div>
+              <div class="prof-role">Head Coach · Musculação</div>
+              <p class="prof-bio">12 anos de experiência em hipertrofia e recomposição corporal. Formado em Ed. Física pela USP com pós em fisiologia do exercício.</p>
+              <div class="prof-tags">
+                <span class="prof-tag">Hipertrofia</span>
+                <span class="prof-tag">Força</span>
+                <span class="prof-tag">Powerlifting</span>
+              </div>
+            </div>
+          </div>
+          <div class="prof-card" data-animate style="transition-delay:0.1s">
+            <div class="prof-avatar">
+              <img src="./assets/Juliana-Santos.png" alt="Juliana Santos" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </div>
+            <div class="prof-info">
+              <div class="prof-name">Juliana Santos</div>
+              <div class="prof-role">Personal Trainer · Funcional</div>
+              <p class="prof-bio">CrossFit Level 2 Coach especialista em treinamento funcional, mobilidade e reabilitação esportiva para atletas de alta performance.</p>
+              <div class="prof-tags">
+                <span class="prof-tag">Funcional</span>
+                <span class="prof-tag">CrossFit</span>
+                <span class="prof-tag">Mobilidade</span>
+              </div>
+            </div>
+          </div>
+          <div class="prof-card" data-animate style="transition-delay:0.2s">
+            <div class="prof-avatar">
+              <img src="./assets/Lucas-Carvalho.png" alt="Lucas Carvalho" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </div>
+            <div class="prof-info">
+              <div class="prof-name">Lucas Carvalho</div>
+              <div class="prof-role">Coach · Emagrecimento</div>
+              <p class="prof-bio">Certificado NSCA com foco em protocolos de emagrecimento e condicionamento cardiovascular. Mais de 500 alunos transformados em 8 anos.</p>
+              <div class="prof-tags">
+                <span class="prof-tag">Cardio</span>
+                <span class="prof-tag">HIIT</span>
+                <span class="prof-tag">Emagrecimento</span>
+              </div>
+            </div>
+          </div>
+          <div class="prof-card" data-animate style="transition-delay:0.3s">
+            <div class="prof-avatar">
+              <img src="./assets/Ana-Ferreira.png" alt="Ana Ferreira" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+            </div>
+            <div class="prof-info">
+              <div class="prof-name">Ana Ferreira</div>
+              <div class="prof-role">Nutricionista Esportiva</div>
+              <p class="prof-bio">Especialista em periodização nutricional e suplementação. Integra nutrição ao treino para maximizar os resultados de atletas e praticantes.</p>
+              <div class="prof-tags">
+                <span class="prof-tag">Nutrição</span>
+                <span class="prof-tag">Suplementação</span>
+                <span class="prof-tag">Performance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <section id="horarios">
+      <div class="section-inner">
+        <div class="hor-header">
+          <span class="section-tag" data-animate>Funcionamento</span>
+          <h2 class="section-title" data-animate>Horários de <span class="accent">atendimento.</span></h2>
+          <p class="section-desc" data-animate>Escolha o melhor horário para o seu treino. Estamos aqui para você durante a semana toda.</p>
+        </div>
+        <div class="hor-tabs">
+          <button class="hor-tab active" onclick="showHorario('musculacao',this)">Musculação</button>
+          <button class="hor-tab" onclick="showHorario('funcional',this)">Funcional</button>
+          <button class="hor-tab" onclick="showHorario('cardio',this)">Cardio</button>
+          <button class="hor-tab" onclick="showHorario('personal',this)">Personal</button>
+        </div>
+        <div id="hor-musculacao" class="hor-panel active">
+          <div class="hor-grid">
+            <div class="hor-card visible"><div class="hor-day">Segunda</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Terça</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Quarta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Quinta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Sexta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Sábado</div><div class="hor-time">08h – 18h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card visible"><div class="hor-day">Domingo</div><div class="hor-time">09h – 13h</div><div class="hor-obs">Horário reduzido</div></div>
+             <div class="hor-card visible"><div class="hor-day">Feriados</div><div class="hor-time">09h – 13h</div><div class="hor-obs">Horário reduzido</div></div>
+          </div>
+        </div>
+        <div id="hor-funcional" class="hor-panel">
+          <div class="hor-grid">
+            <div class="hor-card"><div class="hor-day">Segunda</div><div class="hor-time">07h · 09h · 19h</div><div class="hor-obs">3 turmas</div></div>
+            <div class="hor-card"><div class="hor-day">Terça</div><div class="hor-time">07h · 09h · 19h</div><div class="hor-obs">3 turmas</div></div>
+            <div class="hor-card"><div class="hor-day">Quarta</div><div class="hor-time">07h · 09h · 19h</div><div class="hor-obs">3 turmas</div></div>
+            <div class="hor-card"><div class="hor-day">Quinta</div><div class="hor-time">07h · 09h · 19h</div><div class="hor-obs">3 turmas</div></div>
+            <div class="hor-card"><div class="hor-day">Sexta</div><div class="hor-time">07h · 09h · 18h</div><div class="hor-obs">3 turmas</div></div>
+            <div class="hor-card"><div class="hor-day">Sábado</div><div class="hor-time">09h · 11h</div><div class="hor-obs">2 turmas</div></div>
+            <div class="hor-card hor-closed"><div class="hor-day">Domingo</div><div class="hor-time">—</div><div class="hor-obs">Sem aulas</div></div>
+          </div>
+        </div>
+        <div id="hor-cardio" class="hor-panel">
+          <div class="hor-grid">
+            <div class="hor-card"><div class="hor-day">Segunda</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Terça</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Quarta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Quinta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Sexta</div><div class="hor-time">06h – 22h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Sábado</div><div class="hor-time">08h – 18h</div><div class="hor-obs">Acesso livre</div></div>
+            <div class="hor-card"><div class="hor-day">Domingo</div><div class="hor-time">09h – 13h</div><div class="hor-obs">Horário reduzido</div></div>
+          </div>
+        </div>
+        <div id="hor-personal" class="hor-panel">
+          <div class="hor-grid">
+            <div class="hor-card"><div class="hor-day">Segunda a Sexta</div><div class="hor-time">06h – 21h</div><div class="hor-obs">Sob agendamento</div></div>
+            <div class="hor-card"><div class="hor-day">Sábado</div><div class="hor-time">08h – 16h</div><div class="hor-obs">Sob agendamento</div></div>
+            <div class="hor-card hor-closed"><div class="hor-day">Domingo</div><div class="hor-time">—</div><div class="hor-obs">Sem atendimento</div></div>
+          </div>
+        </div>
+        <div class="hor-legend">
+          <div class="hor-legend-item"><div class="hor-dot" style="background:var(--neon)"></div>Aberto</div>
+          <div class="hor-legend-item"><div class="hor-dot" style="background:#94a3b8"></div>Fechado</div>
+          <div class="hor-legend-item"><div class="hor-dot" style="background:#ffb800"></div>Horário reduzido</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria">
+      <div class="section-inner">
+        <div class="gal-header">
+          <span class="section-tag" data-animate>Galeria</span>
+          <h2 class="section-title" data-animate>Veja a <span class="accent">DarkFit</span> em ação.</h2>
+          <p class="section-desc" data-animate>Cada imagem representa a intensidade e a atmosfera única que você só encontra aqui.</p>
+        </div>
+        <div class="gal-grid" id="galGrid"></div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt=""/>
+      <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- CONTATO -->
+    <section id="contato-form">
+      <div class="section-inner">
+        <div class="contato-grid">
+          <div>
+            <span class="section-tag" data-animate>Fale Conosco</span>
+            <h2 class="section-title" data-animate>Pronto para <span class="accent">começar?</span></h2>
+            <p class="section-desc" data-animate>Preencha o formulário e entraremos em contato pelo WhatsApp em minutos. Sua transformação está a um clique de distância.</p>
+            <div class="contato-details">
+              <div class="contato-detail"><div class="contato-detail-icon">📍</div><div class="contato-detail-text"><strong>Endereço</strong><span>Porto Feliz · SP — Brasil</span></div></div>
+              <div class="contato-detail"><div class="contato-detail-icon">📞</div><div class="contato-detail-text"><strong>WhatsApp</strong><span>(15) 99999-9999</span></div></div>
+              <div class="contato-detail"><div class="contato-detail-icon">✉️</div><div class="contato-detail-text"><strong>E-mail</strong><span>contato@darkfit.com</span></div></div>
+              <div class="contato-detail"><div class="contato-detail-icon">🕐</div><div class="contato-detail-text"><strong>Atendimento</strong><span>Seg–Sex 8h–20h · Sáb 9h–14h</span></div></div>
+            </div>
+          </div>
+          <div class="contato-form-card" data-animate>
+            <h3>⚡ Agende sua Aula Grátis</h3>
+            <p>Resposta garantida em até 1 hora no horário comercial.</p>
+            <div class="form-row">
+              <div class="form-field"><label>Nome</label><input type="text" id="ctNome" placeholder="Seu nome completo"/></div>
+              <div class="form-field"><label>Telefone</label><input type="tel" id="ctTel" placeholder="(15) 99999-9999"/></div>
+            </div>
+            <div class="form-field">
+              <label>Objetivo</label>
+              <select id="ctObj">
+                <option value="">Selecione seu objetivo...</option>
+                <option>Ganho de Massa Muscular</option>
+                <option>Emagrecimento</option>
+                <option>Condicionamento Físico</option>
+                <option>Força e Performance</option>
+                <option>Saúde e Qualidade de Vida</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Plano de Interesse</label>
+              <select id="ctPlano">
+                <option value="">Selecione um plano...</option>
+                <option>Starter – R$ 89,90/mês</option>
+                <option>Performance – R$ 219,90/trim.</option>
+                <option>Elite – R$ 699,90/ano</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+            <div class="form-field"><label>Mensagem (opcional)</label><textarea id="ctMsg" rows="3" placeholder="Alguma dúvida ou informação extra?"></textarea></div>
+            <button class="form-submit" onclick="enviarWhatsApp()">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enviar via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="thankyou-overlay" id="thankyouOverlay">
+      <div class="thankyou-content">
+        <div class="thankyou-icon">💪</div>
+        <div class="thankyou-title">Mensagem Enviada!</div>
+        <p class="thankyou-text">Você foi redirecionado para o nosso WhatsApp. Nossa equipe vai responder em breve e agendar sua aula experimental gratuita.<br><br><strong style="color:var(--neon)">Sua transformação começa agora.</strong></p>
+        <button class="thankyou-close" onclick="document.getElementById('thankyouOverlay').classList.remove('open')">Voltar ao site</button>
+      </div>
+    </div>
+
+    <!-- CTA FINAL -->
+    <section id="cta">
+      <div class="cta-bg"></div>
+      <div class="cta-line"></div>
+      <div class="section-inner">
+        <h2 class="cta-title" data-animate>Sua transformação<br>começa <span class="accent">hoje.</span></h2>
+        <p class="cta-desc" data-animate>Entre para a DarkFit e faça parte de uma comunidade focada em evolução, disciplina e resultados reais.</p>
+        <div class="cta-buttons" data-animate>
+          <a href="https://wa.me/5515999999999?text=Quero%20agendar%20uma%20aula%20experimental%20na%20DarkFit!" class="btn-primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 6l6 6-6 6"/></svg>
+            Agendar Aula Experimental
+          </a>
+          <a href="#planos" class="btn-secondary">Ver Planos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+      <div class="section-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">DARKFIT</span>
+            <p class="footer-tagline">Treine com intensidade. Evolua sem limites. A academia que transforma não apenas corpos, mas vidas.</p>
+          </div>
+          <div>
+            <div class="footer-title">Navegação</div>
+            <ul class="footer-links">
+              <li><a href="#hero">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#modalidades">Modalidades</a></li>
+              <li><a href="#planos">Planos</a></li>
+              <li><a href="#estrutura">Estrutura</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-title">Modalidades</div>
+            <ul class="footer-links">
+              <li><a href="#modalidades">Musculação</a></li>
+              <li><a href="#modalidades">Cardio</a></li>
+              <li><a href="#modalidades">Funcional</a></li>
+              <li><a href="#modalidades">Personal Training</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-title">Contato</div>
+            <div class="footer-contact">
+              <div class="footer-contact-item"><span class="footer-contact-icon">✉️</span>contato@darkfit.com</div>
+              <div class="footer-contact-item"><span class="footer-contact-icon">📞</span>(15) 99999-9999</div>
+              <div class="footer-contact-item"><span class="footer-contact-icon">📍</span>Porto Feliz · SP</div>
+              <div class="footer-contact-item"><span class="footer-contact-icon">🕐</span>Seg–Sex: 6h–22h | Sáb: 8h–18h</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2025 DarkFit. Todos os direitos reservados.</div>
+          <div class="footer-rights">Treine com intensidade. Evolua sem limites.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
