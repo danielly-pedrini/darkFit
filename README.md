@@ -1,6 +1,6 @@
 # 🏋️ DarkFit – Transforme seu corpo. Supere seus limites.
 
-Landing page institucional desenvolvida para uma academia premium fictícia localizada em Porto Feliz, SP. Projeto criado como demonstração de portfólio, com foco em design dark/moderno, performance e experiência do usuário.
+Landing page institucional desenvolvida para uma academia premium. O projeto foi criado como demonstração de portfólio, com foco em design dark/moderno, performance e experiência do usuário.
 
 🔗 **[Ver projeto ao vivo](https://dark-fit.vercel.app/)**
 
@@ -14,7 +14,7 @@ Landing page institucional desenvolvida para uma academia premium fictícia loca
 
 ## 📋 Sobre o projeto
 
-A **DarkFit** é um projeto demo de landing page para academia, com visual premium e escuro, desenvolvido com HTML, CSS e JavaScript puro. O objetivo foi criar uma experiência visual de alto impacto, com seções completas que simulam um negócio real de fitness.
+A **DarkFit** é um projeto de landing page para academia, com visual premium e escuro, desenvolvido com HTML, CSS e JavaScript puro. O objetivo foi criar uma experiência visual de alto impacto, com seções completas que simulam um negócio real de fitness.
 
 ---
 
