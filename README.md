@@ -83,7 +83,7 @@ dark-fit/
 ## 👩‍💻 Desenvolvido por
 
 **Danielly Pedrini** – Desenvolvedora Web  
-[Nelly Tech Solutions]([https://nellytechsolutions.com.br](https://nelly-tech-solutions.vercel.app/)) · [GitHub](https://github.com/danielly-pedrini)
+[Nelly Tech Solutions]([https://nelly-tech-solutions.vercel.app/]) · [GitHub](https://github.com/danielly-pedrini)
 
 ---
 
