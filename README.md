@@ -1,6 +1,6 @@
 # 🏋️ DarkFit – Transforme seu corpo. Supere seus limites.
 
-Landing page institucional desenvolvida para uma academia premium. O projeto foi criado como demonstração de portfólio, com foco em design dark/moderno, performance e experiência do usuário.
+Landing page institucional desenvolvida para uma academia premium, com foco em design dark/moderno, performance e experiência do usuário.
 
 🔗 **[Ver projeto ao vivo](https://dark-fit.vercel.app/)**
 
@@ -83,7 +83,7 @@ dark-fit/
 ## 👩‍💻 Desenvolvido por
 
 **Danielly Pedrini** – Desenvolvedora Web  
-[Nelly Tech Solutions](https://nellytechsolutions.com.br) · [GitHub](https://github.com/danielly-pedrini)
+[Nelly Tech Solutions]([https://nellytechsolutions.com.br](https://nelly-tech-solutions.vercel.app/)) · [GitHub](https://github.com/danielly-pedrini)
 
 ---
 
